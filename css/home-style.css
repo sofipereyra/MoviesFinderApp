@@ -58,10 +58,10 @@ header a{
     margin-right: 8px;
     text-decoration: none;
 }
-/*------------------------------Section movie-------------------------------*/
+/*------------------------------First Section movie-------------------------------*/
 .first-movie-section{
     height: 850px;
-    background-image: linear-gradient(90deg, #080E20 0%, rgba(15, 24, 54, 0.4) 100%), url(../img/Avatar\ 1.svg);
+    background-image: linear-gradient(90deg, #080E20 0%, rgba(15, 24, 54, 0.4) 100%), url(../img/Avatar\ mob.svg);
     background-repeat: no-repeat;
 }
 .first-movie-section .first-movie-container{
@@ -156,4 +156,117 @@ header a{
     line-height: 20px;
     margin-left: 55.88px;
     margin-right: 53px;
+}
+/*-----------------------------------------TAB screen----------------------------------------------------*/
+@media(min-width:641px){
+    /*-------------------Header Section------------------------*/
+    header{
+        justify-content: space-around;
+    }
+
+    /*-------------------First Movie Section------------------------*/
+    .first-movie-section{
+        height: 550px;
+        background-image: linear-gradient(90deg, #080E20 0%, rgba(29, 29, 29, 0) 65.46%), url(../img/Avatar\ 1.png);
+    }
+    .first-movie-section .first-movie-container{
+        padding: 89px 104px 88px;
+    }
+    .first-movie-container .genre{
+        color: var(--bg-primary);
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+    .first-movie-container .star-container img{
+        color: #FF9900;
+        margin-top: 10px;
+        width: 13.43px;
+        height: 12.26px;
+    }
+    .first-movie-container h3{
+        font-size: 3.5rem;
+        margin-top: 13px;
+        margin-bottom: 14px;
+        line-height: 64px;
+    }
+    .first-movie-container .first-movie-description{
+        font-size: 1rem;
+        margin-bottom: 38px;
+        margin-top: 20px;
+        line-height: 32px;
+        height: 128px;
+        width: 530px;
+    }
+    .first-movie-container .watch-btn{
+        border-radius: 45px;
+        font-size: 1.25;
+        height: 60px;
+        width: 250px;
+    }
+}
+@media(min-width:834px){
+    header{
+        justify-content: unset;
+    }
+    header h1{
+        margin: 0;
+        margin-left: 30px;
+        margin-right: 64px;
+    }
+    header .search-bar input{
+        width: 386px;
+        height: 50px;
+        margin-right: 63px;
+    }
+    header a{
+        margin-right: 13px;
+    }
+     /*-------------------First Movie Section------------------------*/
+    .first-movie-section .first-movie-container{
+        padding: 89px 104px 88px;
+    }
+    .first-movie-container .first-movie-description{
+        width: 605px;
+    }
+    /*---------------movie section----------------*/
+    .movies-section{
+        height: 554px;
+    }
+    .movies-section .most-watched{
+        font-size: 1.5rem;
+        padding: 25px 0 15px 60px;
+    }
+    .movies-section .movies-container{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .movies-section .movies-container .movie{
+        width: 225px;
+        height: 309px;
+    }
+    .movies-section .movies-container .movie .movie-title{
+        margin: 0;
+        margin-top: 159px;
+        margin-left: 21px;
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+    .movies-section .movies-container .movie .star-container{
+        margin-left: 21px;
+    }
+    .movies-section .movies-container .movie img{
+        margin-top: 7.7px;
+        width: 9.38px;
+        height: 8.91px;
+    }
+    .movies-section .movies-container .movie .movie-description{
+        font-size: 0.625rem;
+        margin-left: 21px;
+        margin-right: 53px;
+        width: 188px;
+        height: 59px;
+    }
+    .movies-section .movies-container .st, .nd{
+        margin-right: 30px;
+    }
 }
