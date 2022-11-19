@@ -168,6 +168,7 @@ header a{
     .first-movie-section{
         height: 550px;
         background-image: linear-gradient(90deg, #080E20 0%, rgba(29, 29, 29, 0) 65.46%), url(../img/Avatar\ 1.png);
+        background-size: cover;
     }
     .first-movie-section .first-movie-container{
         padding: 89px 104px 88px;
@@ -268,5 +269,80 @@ header a{
     }
     .movies-section .movies-container .st, .nd{
         margin-right: 30px;
+    }
+}
+/*------------------------------------Desktop home screen------------------------------------------------*/
+@media(min-width:845px){
+    /*-------------------Header Section------------------------*/
+    header{
+        justify-content: space-around;
+    }
+}
+@media(min-width:1400px){
+    /*-------------------Header Section------------------------*/
+    header{
+        justify-content: unset;
+        height: 69.95px;
+    }
+    header h1{
+        margin: 0;
+        margin-left: 100px;
+        margin-right: 267px;
+    }
+    header .search-bar input{
+        width: 384px;
+        height: 41.97px;
+        margin-right: 328px;
+    }
+    header a{
+        margin-right: 12px;
+    }
+      /*-------------------First Movie Section------------------------*/
+    .first-movie-section{
+        height: 549.59px;
+    }
+    .first-movie-section .first-movie-container{
+        padding: 89px 104px 88px;
+    }
+    .first-movie-container .first-movie-description{
+        width: 605px;
+    }
+    /*---------------movie section----------------*/
+    .movies-section{
+        height: 729.46px;
+    }
+    .movies-section .most-watched{
+        font-size: 1.5rem;
+        padding: 29.98px 0 35.97px 208px;
+    }
+    .movies-section .movies-container .movie{
+        width: 320px;
+        height: 439.67px;
+    }
+    .movies-section .movies-container .movie .movie-title{
+        margin: 0;
+        margin-top: 246.82px;
+        margin-left: 30px;
+    }
+    .movies-section .movies-container .movie .star-container{
+        margin-left: 30px;
+    }
+    .movies-section .movies-container .movie img{
+        margin-top: 7.7px;
+        width: 9.38px;
+        height: 8.91px;
+    }
+    .movies-section .movies-container .movie .movie-description{
+        margin-left: 30px;
+        margin-right: 58px;
+        width: 232px;
+        height: 83.94px;
+    }
+    .movies-section .movies-container .st, .nd{
+        margin-right: 62px;
+    }
+    .movies-section .movies-container .nd .movie-title{
+        height: 59.96px;
+        width: 202px;
     }
 }
