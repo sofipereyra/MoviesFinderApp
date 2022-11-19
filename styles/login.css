@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,900;1,500&family=Open+Sans:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../assets/login/back2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+/*--------------Header section-------------------*/
+header{
+    height: 161px;
+}
+header h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #2791C2;
+    padding-block: 66px;
+    text-align: center;
+    line-height: 32px;
+}
+header h1 span{
+    font-style: italic;
+    font-weight: lighter;
+}
+/*--------------Form section-------------------*/
+.form-section{
+    background: rgba(49, 49, 49, 0.95);
+    box-shadow: 0px 6px 6px rgba(11, 11, 11, 0.8);
+    opacity: 0.95;
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    height: 1029px;
+    padding: 40px;
+    width: 580px;
+    margin-inline: auto;
+}
+.form-section h4{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 6.5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 486px;
+}
+.form-section h5{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 6.5px;
+    margin-bottom: 40px;
+    width: 486px;
+}
+/*--------------Form-------------------*/
+.form-login{
+    width: 486px;
+    margin-left: 6.5px;
+}
+.form-section .form-login #email, #password{
+    border-radius: 5px;
+    border-style: none;
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding: 25px;
+    width: 100%;
+    height: 70px;
+}
+.pass-positioning{
+    position: relative;
+}
+.form-login .pass-positioning #eye-img{
+    margin-top: 0;
+    height: 24px;
+    width: 38px;
+    position: absolute;
+    bottom: 40%;
+    left:90%;
+    border: none;
+    cursor: pointer;
+}
+.form-login label{
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    right: 15%;
+    bottom: 6px;
+}
+.form-login #remember{
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    position: relative;
+    right: 15.26%;
+    top: 38.9%;
+    bottom: 56.57%;
+}
+.forgot-password{
+    position: relative;
+    left: 15.34%;
+    right: 3.88%;
+    bottom: 6px;
+    text-decoration: none;
+    color: #2791C2;
+    font-size: 20px;
+}
+#login-button{
+    background-color: #29B9FC;
+    border-radius: 35px;
+    border-style: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-inline: auto;
+    margin-top: 36px;
+    margin-bottom: 40px;
+    padding-block: 15px;
+    width: 100%;
+    height: 70px;
+}
+.form-login p{
+    font-size: 20px;
+    margin-bottom: 31px;
+    margin-left: 92px;
+    height: 32px;
+    width: 303px;
+}
+.form-login p a{
+    color: #29B9FC;
+    text-decoration: none;
+    
+}
+/*--------------Division-------------------*/
+#division-login{
+    flex-direction: row;
+    justify-content: center;
+}
+#division-login hr{
+    width: 195px;
+    height: 1px;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+#division-login p{
+    margin: 0 38px;
+    margin-bottom: 50px;
+    font-size: 1.25rem;
+    width: 21px;
+    height: 32px;
+}
+/*--------------Social login-------------------*/
+.form-section .form-login div {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+.form-section .form-login .social-container div{
+    border: 2px solid #FFFFFF;
+    border-radius: 35px;
+    margin-bottom: 40px;
+    width: 487px;
+    height: 70px;
+}
+.form-section .form-login .social-container a{
+    color: #FFFFFF;
+    opacity: 0.85;
+    font-size: 24px;
+    line-height: 20px;
+    text-decoration: none;
+    font-weight:700;
+    margin-left: 89px;
+    text-align: justify;
+}
+.form-section .form-login div a img{
+    position: relative;
+    top: 13px;
+    margin-right: 17px;
+    padding: 0;
+    height: 44px;
+    width: 44px;
+}
+/*---------------------------------------TAB view-----------------------------------------------*/
+@media(min-width: 833px) {
+    /*--------------Header section-------------------*/
+    header{
+        height: 356px;
+    }
+    header h1{
+        height: 32px;
+        padding-top: 268px;
+        font-size: 2.25rem;
+        font-weight: 900;
+    }
+    header h1 span{
+        font-style: italic;
+        font-weight: 500;
+    }
+    /*--------------Form section-------------------*/
+    .form-section{
+        width: 445px;
+        height: 570px;
+    }
+    .form-login{
+        width: 355px;
+        margin-left: 6.5px;
+    }
+    .form-section h4{
+        font-size: 1rem;
+        margin: 0;
+        margin-inline: auto;
+        width: 355px;
+    }
+    .form-section h5{
+        font-size: 1rem;
+        margin-bottom: 10px;
+        margin-top: 2px;
+        margin-inline: auto;
+        width: 355px;
+        font-size: 0.64rem;
+    }
+    .form-section .form-login #email, #password{
+        font-size: 0.81rem;
+        margin-bottom: 8px;
+        padding: 18px;
+        height: 45px;
+    }
+    /*--------------Form-------------------*/
+    .form-login label{
+        font-size: 0.625rem;
+        right: 19.26%;
+        top: 1px;
+    }
+    .form-login #remember{
+        width: 18px;
+        height: 18px;
+        border: 1px;
+        right: 19.26%;
+        top: 5px;
+    }
+    .forgot-password{
+        top: 1px;
+        font-size: 0.625rem;
+    }
+    .form-login .pass-positioning #eye-img{
+        height: 12px;
+        width: 16px;
+        bottom: 45%;
+    }
+    #login-button{
+        font-size: 0.93rem;
+        margin-top: 12px;
+        margin-bottom: 10px;
+        padding-block: 15px;
+        height: 47px;
+        width: 354px;
+    }
+    .form-login p{
+        font-size: 0.625rem;
+        margin-bottom: 0;
+        margin-left: 100px;
+        padding-top: 10px;
+        height: 32px;
+        width: 152px;
+    }
+    /*--------------Division-------------------*/
+    #division-login hr{
+        margin-top: 18px;
+    }
+    #division-login p{
+        margin: 0 29.11px;
+        margin-bottom: 27px;
+        font-size: 0.81rem;
+        width: 14px;
+    }
+    /*--------------Social login-------------------*/
+    .form-section .form-login .social-container div{
+        width: 358px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+    .form-section .form-login .social-container div a{
+        font-size: 0.875rem;
+        line-height: 32px;
+        position: relative;
+        bottom: 4px;
+    }
+    .form-section .form-login div a img{
+        position: relative;
+        top: 10px;
+        height: 29px;
+        width: 28px;
+    }
+    /*---------------------------------------DESK view-----------------------------------------------*/
+    @media(min-width: 1023px){
+        header{
+            height: 160px;
+        }
+        header h1{
+            padding-top: 72px;
+        }
+        .form-section h4{
+            position: relative;
+            bottom: 13px;
+        }
+        .form-section h5{
+            position: relative;
+            bottom: 13px;
+        }
+    }
+}

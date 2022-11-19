@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.1",
+    "json-server-auth": "^2.1.0"
+  },
+  "scripts": {
+    "server": "json-server db.json -m ./node_modules/json-server-auth"
+  }
+}

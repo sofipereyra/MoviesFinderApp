@@ -10,7 +10,7 @@
     <meta name="description"
         content="This is an app where you'll find any movie your looking for, it's synopsis, trailer and release date among other information">
     <meta name="keywords" content="Movies, Reviews, Photos, User Ratings, Synopsis, Trailers">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles/login.css">
 </head>
 
 <body>
@@ -22,11 +22,12 @@
             <h4>Welcome! Log in or Register</h4>
             <h5>Log in to find the movies you’re looking for!</h5>
             <form action="" class="form-login" method="post">
-                <input id="email" type="email" name="email" placeholder="Email" aria-label="Email" required>
+                <label for="email"></label>
+                <input id="email" type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="off">
                 <div class="pass-positioning">
-                    <input id="password" type="password" name="password" placeholder="Password"  aria-label="Password"
-                    required>
-                    <img id="eye-img" src="./img/Ellipse 3.svg" alt="Show password">
+                    <label for="password"></label>
+                    <input id="password" type="password" name="password" placeholder="Password"  aria-label="Password">
+                    <img id="eye-img" src="./assets/login/Ellipse 3.svg" alt="Show password">
                 </div>
                 <input id="remember" type="checkbox" name="remember" value="Remember">
                 <label for="remember">Remember me</label>
@@ -42,17 +43,17 @@
                 <div class="social-container">
                     <div>
                         <a href="#">
-                            <img src="img/facebook-icon.png">Login with Facebook
+                            <img src="./assets/login/facebook-logo.svg">Login with Facebook
                         </a>
                     </div>
                     <div>
                         <a href="#">
-                            <img src="img/twitter-logo.png"> Login with Twitter
+                            <img src="./assets/login/twitter-logo.svg"> Login with Twitter
                         </a>
                     </div>
                     <div>
                         <a href="#">
-                            <img src="img/google-icon.png"> Login with Google
+                            <img src="./assets/login/google-logo.svg"> Login with Google
                         </a>
                     </div>
                 </div>
