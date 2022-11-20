@@ -128,7 +128,6 @@ header a{
     height: 627.38px;
     margin-bottom: 49.62px;
     position: relative;
-    border: 2px solid var(--bg-primary);
 }
 .movies-section .movies-container .movie #movie-bg{
     position: relative;
