@@ -71,11 +71,11 @@ header a{
     color: var(--bg-primary);
     font-size: 1.5rem;
 }
+.first-movie-container .star-container{
+    width: 164px;
+}
 .first-movie-container .star-container img{
-    color: #FF9900;
     margin-top: 10px;
-    width: 23.43px;
-    height: 22.26px;
 }
 .first-movie-container h3{
     font-size: 3.5rem;
@@ -240,6 +240,7 @@ header a{
         width: 605px;
     }
     /*---------------movie section----------------*/
+    /*------------three col movie view------------------*/
     .movies-section{
         height: 554px;
     }
@@ -294,6 +295,37 @@ header a{
         bottom: 150px;
         width: 188px;
         height: 59px;
+    }
+    /*------------one col movie view------------------*/
+    .movies-section.switch-section{
+        height: 1204px;
+    }
+    .movies-section .switch{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .movies-section .movies-container .switch-movie{
+        width: 719px;
+        height: 310px;
+        margin-inline: 15px;
+        position: relative;
+    }
+    .movies-section .movies-container .movie .switch-title{
+        position: relative;
+        left: 90px;
+        bottom: 159px;
+    }
+    .movies-section .movies-container .movie .switch-star-container{
+        position: relative;
+        left: 90px;
+        bottom:160px;
+    }
+    .movies-section .movies-container .movie .switch-description {
+        position: relative;
+        font-size: 0.625rem;
+        left: 90px;
+        bottom: 150px;
+        width: 544px;
     }
 }
 /*------------------------------------Desktop home screen------------------------------------------------*/
@@ -375,5 +407,32 @@ header a{
     .movies-section .movies-container .nd .movie-title{
         height: 59.96px;
         width: 202px;
+    }
+    /*------------one col movie view------------------*/
+    .movies-section.switch-section{
+        height: 1659.41px;
+    }
+    .movies-section .switch{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .movies-section .movies-container .switch-movie{
+        width: 1022px;
+        height: 440px;
+        margin-inline: 15px;
+    }
+    .movies-section .movies-container .movie .switch-title{
+        left: 128px;
+        bottom: 180.82px;
+    }
+    .movies-section .movies-container .movie .switch-star-container{
+        left: 128px;
+        bottom:175px;
+    }
+    .movies-section .movies-container .movie .switch-description {
+        font-size: 0.625rem;
+        left: 128px;
+        bottom: 150px;
+        width: 772.89px;
     }
 }
