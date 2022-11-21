@@ -61,7 +61,7 @@ header a{
 /*------------------------------First Section movie-------------------------------*/
 .first-movie-section{
     height: 850px;
-    background-image: linear-gradient(90deg, #080E20 0%, rgba(15, 24, 54, 0.4) 100%), url(../img/Avatar\ mob.svg);
+    background-image: linear-gradient(90deg, #080E20 0%, rgba(15, 24, 54, 0.4) 100%), url(../assets/home/Avatar\ mob.svg);
     background-repeat: no-repeat;
 }
 .first-movie-section .first-movie-container{
@@ -71,11 +71,11 @@ header a{
     color: var(--bg-primary);
     font-size: 1.5rem;
 }
+.first-movie-container .star-container{
+    width: 164px;
+}
 .first-movie-container .star-container img{
-    color: #FF9900;
     margin-top: 10px;
-    width: 23.43px;
-    height: 22.26px;
 }
 .first-movie-container h3{
     font-size: 3.5rem;
@@ -114,6 +114,9 @@ header a{
     font-weight: 700;
     padding: 50px 0 50px 95px;
 }
+.switch-col-container{
+    display: none;
+}
 .movies-section .movies-container{
     display: flex;
     flex-direction: column;
@@ -124,25 +127,29 @@ header a{
     width: 449px;
     height: 627.38px;
     margin-bottom: 49.62px;
+    position: relative;
 }
-.movies-section .movies-container .st{
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url(../img/prey-mob.png);
-}
-.movies-section .movies-container .nd{
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url(../img/jurassic\ mob.png);
-}
-.movies-section .movies-container .rd{
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url(../img/kong\ mob.png);
+.movies-section .movies-container .movie #movie-bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
 }
 .movies-section .movies-container .movie .movie-title{
-    margin-left: 55.88px;
-    margin-top: 400px;
+    position: relative;
+    left: 55.88px;
+    bottom: 253.58px;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
+    z-index: 1;
+    width: 333px;
 }
 .movies-section .movies-container .movie .star-container{
-    margin-left: 55.88px;
+    position: relative;
+    left: 55.88px;
+    bottom: 247.58px;
+    z-index: 1;
 }
 .movies-section .movies-container .movie img{
     color: #FF9900;
@@ -154,8 +161,11 @@ header a{
     font-weight: 400;
     font-size: 1rem;
     line-height: 20px;
-    margin-left: 55.88px;
-    margin-right: 53px;
+    position: relative;
+    left: 55.88px;
+    bottom: 223.58px;
+    z-index: 1;
+    width: 339.56px;
 }
 /*-----------------------------------------TAB screen----------------------------------------------------*/
 @media(min-width:641px){
@@ -167,7 +177,7 @@ header a{
     /*-------------------First Movie Section------------------------*/
     .first-movie-section{
         height: 550px;
-        background-image: linear-gradient(90deg, #080E20 0%, rgba(29, 29, 29, 0) 65.46%), url(../img/Avatar\ 1.png);
+        background-image: linear-gradient(90deg, #080E20 0%, rgba(29, 29, 29, 0) 65.46%), url(../assets/home/Avatar\ 1.png);
         background-size: cover;
     }
     .first-movie-section .first-movie-container{
@@ -230,12 +240,28 @@ header a{
         width: 605px;
     }
     /*---------------movie section----------------*/
+    /*------------three col movie view------------------*/
     .movies-section{
         height: 554px;
     }
-    .movies-section .most-watched{
+    .movies-section .movie-options .most-watched{
         font-size: 1.5rem;
         padding: 25px 0 15px 60px;
+    }
+    .movie-options{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .switch-col-container{
+        display: flex;
+        margin-right: 57px;
+        align-items: center;
+        margin-top: 28px;
+        margin-bottom: 30px;
+    }
+    #switch-three{
+        margin-right: 13px;
     }
     .movies-section .movies-container{
         flex-direction: row;
@@ -244,16 +270,19 @@ header a{
     .movies-section .movies-container .movie{
         width: 225px;
         height: 309px;
+        margin-inline: 15px;
     }
     .movies-section .movies-container .movie .movie-title{
         margin: 0;
-        margin-top: 159px;
-        margin-left: 21px;
+        bottom: 159px;
+        left: 21px;
         font-weight: 700;
         font-size: 1.25rem;
+        width: 183px;
     }
     .movies-section .movies-container .movie .star-container{
-        margin-left: 21px;
+        bottom:160px;
+        left: 21px;
     }
     .movies-section .movies-container .movie img{
         margin-top: 7.7px;
@@ -262,23 +291,51 @@ header a{
     }
     .movies-section .movies-container .movie .movie-description{
         font-size: 0.625rem;
-        margin-left: 21px;
-        margin-right: 53px;
+        left: 21px;
+        bottom: 150px;
         width: 188px;
         height: 59px;
     }
-    .movies-section .movies-container .st, .nd{
-        margin-right: 30px;
+    /*------------one col movie view------------------*/
+    .movies-section.switch-section{
+        height: 1204px;
+    }
+    .movies-section .switch{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .movies-section .movies-container .switch-movie{
+        width: 719px;
+        height: 310px;
+        margin-inline: 15px;
+        position: relative;
+    }
+    .movies-section .movies-container .movie .switch-title{
+        position: relative;
+        left: 90px;
+        bottom: 159px;
+    }
+    .movies-section .movies-container .movie .switch-star-container{
+        position: relative;
+        left: 90px;
+        bottom:160px;
+    }
+    .movies-section .movies-container .movie .switch-description {
+        position: relative;
+        font-size: 0.625rem;
+        left: 90px;
+        bottom: 150px;
+        width: 544px;
     }
 }
 /*------------------------------------Desktop home screen------------------------------------------------*/
-@media(min-width:845px){
+@media (845px < width <= 1400px), (1446px < width <= 2560px) {
     /*-------------------Header Section------------------------*/
     header{
         justify-content: space-around;
     }
 }
-@media(min-width:1400px){
+@media (1400px < width < 1445px){
     /*-------------------Header Section------------------------*/
     header{
         justify-content: unset;
@@ -313,19 +370,24 @@ header a{
     }
     .movies-section .most-watched{
         font-size: 1.5rem;
-        padding: 29.98px 0 35.97px 208px;
+        margin: 29.98px 0 35.97px 148px;
+    }
+    .switch-col-container{
+        margin-right: 217px;
     }
     .movies-section .movies-container .movie{
         width: 320px;
         height: 439.67px;
+        margin-inline: 31px;
     }
     .movies-section .movies-container .movie .movie-title{
         margin: 0;
-        margin-top: 246.82px;
-        margin-left: 30px;
+        bottom: 180.82px;
+        left: 30px;
     }
     .movies-section .movies-container .movie .star-container{
-        margin-left: 30px;
+        left: 30px;
+        bottom:175px;
     }
     .movies-section .movies-container .movie img{
         margin-top: 7.7px;
@@ -333,7 +395,8 @@ header a{
         height: 8.91px;
     }
     .movies-section .movies-container .movie .movie-description{
-        margin-left: 30px;
+        left: 30px;
+        bottom:165px;
         margin-right: 58px;
         width: 232px;
         height: 83.94px;
@@ -345,4 +408,32 @@ header a{
         height: 59.96px;
         width: 202px;
     }
+    /*------------one col movie view------------------*/
+    .movies-section.switch-section{
+        height: 1659.41px;
+    }
+    .movies-section .switch{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .movies-section .movies-container .switch-movie{
+        width: 1022px;
+        height: 440px;
+        margin-inline: 15px;
+    }
+    .movies-section .movies-container .movie .switch-title{
+        left: 128px;
+        bottom: 180.82px;
+    }
+    .movies-section .movies-container .movie .switch-star-container{
+        left: 128px;
+        bottom:175px;
+    }
+    .movies-section .movies-container .movie .switch-description {
+        font-size: 0.625rem;
+        left: 128px;
+        bottom: 150px;
+        width: 772.89px;
+    }
+
 }
