@@ -16,7 +16,7 @@
             <img src="./assets/home/seach-icon.svg" alt="seach-icon">
             <input type="text" placeholder="Search movies...">
         </div>
-        <a href="#">Log out</a>
+        <a id="logout" href="/index.html">Log out</a>
         <img src="./assets/home/profile.svg" alt="profile-image">
     </header>
     <main>
@@ -24,11 +24,11 @@
             <div class="first-movie-container">
                 <p class="genre">Science Fiction</p>
                 <div class="star-container">
-                    <img src="./assets/home/Gold_Star.png" alt="">
-                    <img src="./assets/home/Gold_Star.png" alt="">
-                    <img src="./assets/home/Gold_Star.png" alt="">
-                    <img src="./assets/home/Gold_Star.png" alt="">
-                    <img src="./assets/home/Gold_Star.png" alt="">
+                    <img src="./assets/home/star.svg" alt="">
+                    <img src="./assets/home/star.svg" alt="">
+                    <img src="./assets/home/star.svg" alt="">
+                    <img src="./assets/home/star.svg" alt="">
+                    <img src="./assets/home/star.svg" alt="">
                 </div>
                 <h3>Avatar 2</h3>
                 <p class="first-movie-description">Set more than a decade after the eventsof the first
@@ -38,62 +38,63 @@
                 <button class="watch-btn" aria-label="watch now button">Watch Now</button>
             </div>
         </section>
-        <section class="movies-section">
+        <section class="movies-section switch-section">
             <div class="movie-options">
                 <p class="most-watched">Most Watched Movies</p>
                 <div class="switch-col-container">
-                    <button class="switch-three"><img src="assets/home/switch-3-col.svg"
+                    <button id="switch-three"><img src="assets/home/switch-3-col.svg"
                             alt="Switch button three columns"></button>
-                    <button class="switch-one"><img src="assets/home/switch-1-col.svg"
+                    <button id="switch-one"><img src="assets/home/switch-1-col.svg"
                             alt="Switch button one column"></button>
                 </div>
             </div>
-            <div class="movies-container">
-                <div class="movie">
+            <div id="movie-container" class="movies-container">
+                <div id="movie" class="movie">
                     <img id="movie-bg" src="assets/home/prey-mob.png" alt="">
                     <p class="movie-title">Prey</p>
                     <div class="star-container">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
                     </div>
-                    <p class="movie-description">In 1719 in the Great Plains, Naru, a young Comanche woman trained
+                    <p id="movie-description" class="movie-description">In 1719 in the Great Plains, Naru, a young Comanche woman trained
                         as a
                         healer, dreams of becoming a great hunter.</p>
                 </div>
-                <div class="movie">
-                    <img id="movie-bg" src="assets/home/prey-mob.png" alt="">
+                <div id="movie" class="movie">
+                    <img id="movie-bg" src="assets/home/jurassic mob.png" alt="">
                     <p class="movie-title">Jurassic World
                         Dominion</p>
                     <div class="star-container">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
                     </div>
-                    <p class="movie-description">Four years after the Lockwood Estate incident and the cataclysmic
+                    <p id="movie-description" class="movie-description">Four years after the Lockwood Estate incident and the cataclysmic
                         volcanic eruption on Isla Nublar.</p>
                 </div>
-                <div class="movie">
-                    <img id="movie-bg" src="assets/home/prey-mob.png" alt="">
+                <div id="movie" class="movie">
+                    <img id="movie-bg" src="assets/home/kong mob.png" alt="">
                     <p class="movie-title">Godzilla vs Kong</p>
                     <div class="star-container">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
-                        <img src="./assets/home/Gold_Star.png" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
+                        <img src="./assets/home/star.svg" alt="">
                     </div>
-                    <p class="movie-description">Five years after Godzilla defeated King Ghidorah, Kong is monitored
+                    <p id="movie-description" class="movie-description">Five years after Godzilla defeated King Ghidorah, Kong is monitored
                         by
                         Monarch within a giant dome on Skull Island. </p>
                 </div>
             </div>
         </section>
     </main>
+    <script src="./js/switch-columns.js"></script>
 </body>
 
 </html>
