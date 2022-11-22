@@ -90,7 +90,8 @@ header a{
     margin-bottom: 50px;
     margin-top: 30px;
     line-height: 38px;
-    height: 266px;
+    max-height: 266px;
+    overflow: auto;
     width: 462px;
 }
 .first-movie-container .watch-btn{
@@ -138,7 +139,7 @@ header a{
 .movies-section .movies-container .movie .movie-title{
     position: relative;
     left: 55.88px;
-    bottom: 253.58px;
+    bottom: 263.58px;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -148,7 +149,7 @@ header a{
 .movies-section .movies-container .movie .star-container{
     position: relative;
     left: 55.88px;
-    bottom: 247.58px;
+    bottom: 257.58px;
     z-index: 1;
 }
 .movies-section .movies-container .movie img{
@@ -163,9 +164,11 @@ header a{
     line-height: 20px;
     position: relative;
     left: 55.88px;
-    bottom: 223.58px;
+    bottom: 253.58px;
     z-index: 1;
     width: 339.56px;
+    height: 84px;
+    overflow: auto;
 }
 /*-----------------------------------------TAB screen----------------------------------------------------*/
 @media(min-width:641px){
@@ -241,9 +244,6 @@ header a{
     }
     /*---------------movie section----------------*/
     /*------------three col movie view------------------*/
-    .movies-section{
-        height: 554px;
-    }
     .movies-section .movie-options .most-watched{
         font-size: 1.5rem;
         padding: 25px 0 15px 60px;
@@ -266,6 +266,7 @@ header a{
     .movies-section .movies-container{
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
     }
     .movies-section .movies-container .movie{
         width: 225px;
@@ -274,14 +275,14 @@ header a{
     }
     .movies-section .movies-container .movie .movie-title{
         margin: 0;
-        bottom: 159px;
+        bottom: 163px;
         left: 21px;
         font-weight: 700;
         font-size: 1.25rem;
         width: 183px;
     }
     .movies-section .movies-container .movie .star-container{
-        bottom:160px;
+        bottom:169px;
         left: 21px;
     }
     .movies-section .movies-container .movie img{
@@ -292,14 +293,13 @@ header a{
     .movies-section .movies-container .movie .movie-description{
         font-size: 0.625rem;
         left: 21px;
-        bottom: 150px;
+        bottom: 170px;
         width: 188px;
-        height: 59px;
+        height: 55px;
+        overflow: auto;
+
     }
     /*------------one col movie view------------------*/
-    .movies-section.switch-section{
-        height: 1204px;
-    }
     .movies-section .switch{
         flex-direction: column;
         justify-content: center;
@@ -365,9 +365,6 @@ header a{
         width: 605px;
     }
     /*---------------movie section----------------*/
-    .movies-section{
-        height: 729.46px;
-    }
     .movies-section .most-watched{
         font-size: 1.5rem;
         margin: 29.98px 0 35.97px 148px;
@@ -409,9 +406,6 @@ header a{
         width: 202px;
     }
     /*------------one col movie view------------------*/
-    .movies-section.switch-section{
-        height: 1659.41px;
-    }
     .movies-section .switch{
         flex-direction: column;
         justify-content: center;
