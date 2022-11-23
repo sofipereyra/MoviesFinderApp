@@ -32,8 +32,8 @@ function validatePassword(validationPassword){
 
 function login(email, password){
     var raw = JSON.stringify({
-        "email": email,
-        "password": password
+        "email": email.value,
+        "password": password.value
       });
       
       var requestOptions = {
@@ -43,13 +43,18 @@ function login(email, password){
         redirect: 'follow'
       };
       
-      fetch("http://localhost:3000/users", requestOptions)
-        .then(response => response.text())
+      fetch("http://localhost:3000/login", requestOptions)
+        .then(response => {
+          if (!response.ok) throw Error(response.status);
+    
+          return response;
+        })
+        .then(response => response.json())
         .then(result => {
               console.log(result);
               localStorage.setItem('token',result.accesToken);
               window.location.href = './home.html'})
-        .catch(error => console.log('error', error));
+        .catch(error => errorLabel.innerHTML = `${error}: Not a valid user, please try again.`);
 }
 
 const errorLabel = document.getElementById("error")
