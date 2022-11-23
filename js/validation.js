@@ -7,21 +7,27 @@ const form = document.querySelector(".form-login");
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
+function UserException(sms) {
+  this.sms = sms;
+}
 
 function validateEmail(mail) {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value))
-   {
-     return (true)
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value)){
+     return (true);
+   }else if(mail.value.length === 0){
+      throw new UserException("Please enter an email address");
+   }else{
+      throw new UserException("You have entered an invalid email address!");
    }
-     alert("You have entered an invalid email address!")
-     return (false)
 }
 function validatePassword(validationPassword){
     if (/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(pass.value)) {
         return (true)
+    }else if(password.value.length === 0){
+      throw new UserException("A password is required!");
+    }else{
+      throw new UserException("You have entered an invalid password!");
     }
-    alert("You have entered an invalid password!")
-    return (false)
 }
 
 function login(email, password){
@@ -46,12 +52,15 @@ function login(email, password){
         .catch(error => console.log('error', error));
 }
 
+const errorLabel = document.getElementById("error")
 
 form.addEventListener('submit', (e) =>{
   e.preventDefault();
-  if(validateEmail(mail)&& validatePassword(pass)){
-    login(mail, pass);
-  }else {
-    console.log("oops");
+  try{
+    if(validateEmail(mail) && validatePassword(pass)){
+      login(mail, pass);
+    }
+  }catch (UserException){
+    errorLabel.innerHTML = UserException.sms;
   }
 })
