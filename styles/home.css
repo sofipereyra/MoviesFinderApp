@@ -131,28 +131,32 @@ header a{
     position: relative;
 }
 .movies-section .movies-container .movie #movie-bg{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     
 }
-.movies-section .movies-container .movie .movie-title{
+.movies-section .movies-container .movie .movie-info{
     position: relative;
-    left: 55.88px;
-    bottom: 263.58px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.movies-section .movies-container .movie .movie-title{
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
-    z-index: 1;
     width: 333px;
+    margin-left: 56px;
 }
 .movies-section .movies-container .movie .star-container{
-    position: relative;
-    left: 55.88px;
-    bottom: 257.58px;
-    z-index: 1;
+    margin-left: 56px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
-.movies-section .movies-container .movie img{
+.movies-section .movies-container .movie .star{
     color: #FF9900;
     margin-top: 10px;
     width: 13.33px;
@@ -162,13 +166,14 @@ header a{
     font-weight: 400;
     font-size: 1rem;
     line-height: 20px;
-    position: relative;
-    left: 55.88px;
-    bottom: 253.58px;
-    z-index: 1;
     width: 339.56px;
-    height: 84px;
-    overflow: auto;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 35px;
+    margin-left: 56px;
 }
 /*-----------------------------------------TAB screen----------------------------------------------------*/
 @media(min-width:641px){
@@ -274,19 +279,17 @@ header a{
         margin-inline: 15px;
     }
     .movies-section .movies-container .movie .movie-title{
-        margin: 0;
-        bottom: 163px;
+        margin-left: 21px;
         left: 21px;
         font-weight: 700;
         font-size: 1.25rem;
         width: 183px;
     }
     .movies-section .movies-container .movie .star-container{
-        bottom:169px;
-        left: 21px;
+        margin-left: 21px;
+        margin-bottom: 7px;
     }
     .movies-section .movies-container .movie img{
-        margin-top: 7.7px;
         width: 9.38px;
         height: 8.91px;
     }
@@ -296,8 +299,7 @@ header a{
         bottom: 170px;
         width: 188px;
         height: 55px;
-        overflow: auto;
-
+        margin-left: 21px;
     }
     /*------------one col movie view------------------*/
     .movies-section .switch{
@@ -308,24 +310,17 @@ header a{
         width: 719px;
         height: 310px;
         margin-inline: 15px;
-        position: relative;
     }
-    .movies-section .movies-container .movie .switch-title{
-        position: relative;
-        left: 90px;
-        bottom: 159px;
+    .movies-section .movies-container .movie .movie-info .switch-title{
+        margin-left: 90px;
     }
     .movies-section .movies-container .movie .switch-star-container{
-        position: relative;
-        left: 90px;
-        bottom:160px;
+        margin-left: 90px;
     }
     .movies-section .movies-container .movie .switch-description {
-        position: relative;
         font-size: 0.625rem;
-        left: 90px;
-        bottom: 150px;
         width: 544px;
+        margin-left: 90px;
     }
 }
 /*------------------------------------Desktop home screen------------------------------------------------*/
@@ -378,13 +373,10 @@ header a{
         margin-inline: 31px;
     }
     .movies-section .movies-container .movie .movie-title{
-        margin: 0;
-        bottom: 180.82px;
-        left: 30px;
+        margin-left: 30px;
     }
     .movies-section .movies-container .movie .star-container{
-        left: 30px;
-        bottom:175px;
+        margin-left: 30px;
     }
     .movies-section .movies-container .movie img{
         margin-top: 7.7px;
@@ -392,18 +384,11 @@ header a{
         height: 8.91px;
     }
     .movies-section .movies-container .movie .movie-description{
-        left: 30px;
-        bottom:165px;
+        margin-left: 30px;
         margin-right: 58px;
         width: 232px;
-        height: 83.94px;
-    }
-    .movies-section .movies-container .st, .nd{
-        margin-right: 62px;
-    }
-    .movies-section .movies-container .nd .movie-title{
-        height: 59.96px;
-        width: 202px;
+        height: 59.94px;
+        margin-bottom: 50px;
     }
     /*------------one col movie view------------------*/
     .movies-section .switch{
@@ -416,17 +401,14 @@ header a{
         margin-inline: 15px;
     }
     .movies-section .movies-container .movie .switch-title{
-        left: 128px;
-        bottom: 180.82px;
+        margin-left: 90px;
     }
     .movies-section .movies-container .movie .switch-star-container{
-        left: 128px;
-        bottom:175px;
+        margin-left: 90px;
     }
     .movies-section .movies-container .movie .switch-description {
         font-size: 0.625rem;
-        left: 128px;
-        bottom: 150px;
+        margin-left: 90px;
         width: 772.89px;
     }
 }

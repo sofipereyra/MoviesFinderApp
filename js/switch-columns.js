@@ -25,11 +25,11 @@ oneColBtn.addEventListener('click', function(){
     }
     for (let i = 0; i <  movieTitle.length; i++) {
         const e = movieTitle[i];
-        e.classList.add('switch-description');
+        e.classList.add('switch-title');
     }
     for (let i = 0; i <  starContainer.length; i++) {
         const e = starContainer[i];
-        e.classList.add('switch-description');
+        e.classList.add('switch-star-container');
     }
     for (let i = 0; i <  movieDescription.length; i++) {
         const e = movieDescription[i];
@@ -52,11 +52,11 @@ threeColBtn.addEventListener('click', function(){
     }
     for (let i = 0; i <  movieTitle.length; i++) {
         const e = movieTitle[i];
-        e.classList.remove('switch-description');
+        e.classList.remove('switch-title');
     }
     for (let i = 0; i <  starContainer.length; i++) {
         const e = starContainer[i];
-        e.classList.remove('switch-description');
+        e.classList.remove('switch-star-container');
     }
     for (let i = 0; i <  movieDescription.length; i++) {
         const e = movieDescription[i];

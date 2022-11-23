@@ -22,15 +22,17 @@ function showMovies(data){
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
             <img id="movie-bg" src="${IMG_URL}${movie.backdrop_path}" alt="">
-            <p class="movie-title">${movie.title}</p>
-            <div class="star-container">
-                <img src="./assets/home/star.svg" alt="">
-                <img src="./assets/home/star.svg" alt="">
-                <img src="./assets/home/star.svg" alt="">
-                <img src="./assets/home/star.svg" alt="">
-                <img src="./assets/home/star.svg" alt="">
+            <div class="movie-info">
+                <p class="movie-title">${movie.title}</p>
+                <div class="star-container">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                </div>
+                <p id="movie-description" class="movie-description">${movie.overview}</p>
             </div>
-            <p id="movie-description" class="movie-description">${movie.overview}</p>
         `
         movieContainer.append(movieEl);
     });
