@@ -233,8 +233,14 @@ header h1 span{
         padding: 18px;
         height: 45px;
     }
+    .form-section .form-login #error{
+        color: rgb(254, 71, 71);
+        position: relative;
+        margin-bottom: 2px;
+        font-size: 0.8rem;
+    }
     /*--------------Form-------------------*/
-    .form-login label{
+    .form-login #remember-label{
         font-size: 0.625rem;
         right: 19.26%;
         top: 1px;
