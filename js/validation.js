@@ -54,7 +54,7 @@ function login(email, password){
               console.log(result);
               localStorage.setItem('token',result.accesToken);
               window.location.href = './home.html'})
-        .catch(error => errorLabel.innerHTML = `${error}: Not a valid user, please try again.`);
+        .catch(error => errorLabel.innerHTML = `Not a valid user, please try again.`);
 }
 
 const errorLabel = document.getElementById("error")
