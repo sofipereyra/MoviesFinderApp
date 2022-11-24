@@ -134,7 +134,7 @@ header a{
     position: absolute;
     width: 100%;
     height: 100%;
-    
+    object-fit: cover;
 }
 .movies-section .movies-container .movie .movie-info{
     position: relative;

@@ -6,6 +6,10 @@ const SEARCH_URL = 'https://api.themoviedb.org/3/search/movie?' + API_KEY + '&qu
 
 getMovies(API_URL)
 
+function ErrorException(sms) {
+    this.sms = sms;
+  }
+
 function getMovies(url){
     fetch(url)
     .then(res => res.json())
@@ -43,13 +47,13 @@ const searchForm = document.getElementById("search-form");
 const search = document.getElementById("search");
 
 searchForm.addEventListener('submit', (e) => {
-    e.preventDefault;
-    const searchValue = search.value;
-    if(searchValue && searchValue !== ''){
+    e.preventDefault();
+    let searchValue = search.value;
+    if(searchValue === ''){
+        throw new ErrorException("It can't be empty!");
+    }else{
         getMovies(SEARCH_URL+searchValue);
         searchValue = '';
-    }else{
-        window.location.reload();
     }
 })
 
