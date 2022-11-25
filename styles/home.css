@@ -203,8 +203,6 @@ header a{
     .first-movie-section{
         height: 550px;
     }
-    .first-movie-section .first-movie-container{
-    }
     .first-movie-container .genre{
         color: var(--bg-primary);
         font-size: 0.875rem;
@@ -265,9 +263,7 @@ header a{
         margin-right: 13px;
     }
      /*-------------------First Movie Section------------------------*/
-    .first-movie-section .first-movie-container{
-    }
-    .first-movie-container .first-movie-description{
+    .first-movie-container .first-m-description-container{
         width: 605px;
     }
     /*---------------movie section----------------*/
