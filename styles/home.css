@@ -42,6 +42,9 @@ header .search-bar img{
     left: 12px;
 
 }
+header .search-bar .search-form{
+    padding-right: 22px;
+}
 header .search-bar input{
     width: 244px;
     height: 46px;
@@ -50,7 +53,10 @@ header .search-bar input{
     border-radius: 5px;
     border-style: none;
     padding-left: 48px;
-    margin-right: 22px;
+}
+header .search-bar #search-error{
+    position: relative;
+    color: rgb(92, 25, 25);
 }
 header a{
     color: var(--font-primary);
