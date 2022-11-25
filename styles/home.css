@@ -120,8 +120,10 @@ header a{
     font-size: 24px;
     line-height: 20px;  
     height: 75px;
-    margin-left: 5px;
+    margin-top: 50px;
+    margin-left: 94px;
     width: 451px;
+    position: relative;
 }
 /*---------------movie section----------------*/
 .movies-section{
@@ -170,27 +172,28 @@ header a{
 }
 .movies-section .movies-container .movie .star-container{
     margin-left: 56px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 2px;
 }
 .movies-section .movies-container .movie .star{
     color: #FF9900;
-    margin-top: 10px;
     width: 13.33px;
     height: 12.66px;
+}
+.movies-section .movies-container .movie .movie-description-container{
+    width: 339.56px;
+    height: 60px;
+    margin-bottom: 35px;
 }
 .movies-section .movies-container .movie .movie-description{
     font-weight: 400;
     font-size: 1rem;
     line-height: 20px;
-    width: 339.56px;
-    height: 60px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin-bottom: 35px;
-    margin-left: 56px;
+    padding-left: 56px;
 }
 /*-----------------------------------------TAB screen----------------------------------------------------*/
 @media(min-width:641px){
@@ -243,6 +246,8 @@ header a{
         font-size: 1.25;
         height: 60px;
         width: 250px;
+        margin-top: 38px;
+        margin-left: 104px;
     }
 }
 @media(min-width:834px){
@@ -312,13 +317,16 @@ header a{
         width: 9.38px;
         height: 8.91px;
     }
+    .movies-section .movies-container .movie .movie-description-container{
+        width: 188px;
+        height: 55px;
+        margin-bottom: 35px;
+    }
     .movies-section .movies-container .movie .movie-description{
         font-size: 0.625rem;
         left: 21px;
         bottom: 170px;
-        width: 188px;
-        height: 55px;
-        margin-left: 21px;
+        padding-left: 21px;
     }
     /*------------one col movie view------------------*/
     .movies-section .switch{
@@ -384,6 +392,12 @@ header a{
     .first-movie-container .first-m-description-container{
         padding-left: 179px;
         width: 605px;
+    }
+    .first-movie-container .watch-btn{
+        height: 55px;
+        width: 261px;
+        margin-top: 38.27px;
+        margin-left: 179px;
     }
     /*---------------movie section----------------*/
     .movies-section .most-watched{

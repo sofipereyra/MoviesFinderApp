@@ -56,7 +56,9 @@ function showMovies(data){
                     <img class="star" src="./assets/home/star.svg" alt="">
                     <img class="star" src="./assets/home/star.svg" alt="">
                 </div>
+                <div class="movie-description-container">
                 <p id="movie-description" class="movie-description">${movie.overview}</p>
+                </div>
             </div>
         `
         movieContainer.append(movieEl);
