@@ -61,20 +61,29 @@ header a{
 /*------------------------------First Section movie-------------------------------*/
 .first-movie-section{
     height: 850px;
-    background-image: linear-gradient(90deg, #080E20 0%, rgba(15, 24, 54, 0.4) 100%), url(../assets/home/Avatar\ mob.svg);
-    background-repeat: no-repeat;
 }
 .first-movie-section .first-movie-container{
-    padding: 152px 89px 152px;
+    position: relative;
+    height: 100%;
+}
+.first-movie-section .first-movie-container #bg-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .first-movie-container .genre{
+    position: relative;
     color: var(--bg-primary);
     font-size: 1.5rem;
+    padding-top: 152px; 
+    padding-left: 89px;
 }
 .first-movie-container .star-container{
-    width: 164px;
+    position: relative;
+    padding-left: 89px;
 }
-.first-movie-container .star-container img{
+.first-movie-container .star-container .star{
     margin-top: 10px;
 }
 .first-movie-container h3{
@@ -83,6 +92,13 @@ header a{
     margin-top: 16.5px;
     margin-bottom: 14px;
     line-height: 38px;
+    position: relative;
+    padding-left: 89px;
+}
+.first-movie-container .first-m-description-container{
+    padding-left: 89px;
+    height: 266px;
+    width: 462px;
 }
 .first-movie-container .first-movie-description{
     font-size: 1.5rem;
@@ -93,6 +109,7 @@ header a{
     max-height: 266px;
     overflow: auto;
     width: 462px;
+    position: relative;
 }
 .first-movie-container .watch-btn{
     background-color: var(--bg-primary);
@@ -134,7 +151,7 @@ header a{
     position: absolute;
     width: 100%;
     height: 100%;
-    
+    object-fit: cover;
 }
 .movies-section .movies-container .movie .movie-info{
     position: relative;
@@ -185,20 +202,21 @@ header a{
     /*-------------------First Movie Section------------------------*/
     .first-movie-section{
         height: 550px;
-        background-image: linear-gradient(90deg, #080E20 0%, rgba(29, 29, 29, 0) 65.46%), url(../assets/home/Avatar\ 1.png);
-        background-size: cover;
     }
     .first-movie-section .first-movie-container{
-        padding: 89px 104px 88px;
     }
     .first-movie-container .genre{
         color: var(--bg-primary);
         font-size: 0.875rem;
         font-weight: 400;
+        padding-top: 89px;
+        padding-left: 104px;
     }
-    .first-movie-container .star-container img{
-        color: #FF9900;
+    .first-movie-container .star-container{
+        padding-left: 104px;
         margin-top: 10px;
+    }
+    .first-movie-container .star-container .star{
         width: 13.43px;
         height: 12.26px;
     }
@@ -207,6 +225,12 @@ header a{
         margin-top: 13px;
         margin-bottom: 14px;
         line-height: 64px;
+        padding-left: 104px;
+    }
+    .first-movie-container .first-m-description-container{
+        padding-left: 104px;
+        height: 128px;
+        width: 605px;
     }
     .first-movie-container .first-movie-description{
         font-size: 1rem;
@@ -242,7 +266,6 @@ header a{
     }
      /*-------------------First Movie Section------------------------*/
     .first-movie-section .first-movie-container{
-        padding: 89px 104px 88px;
     }
     .first-movie-container .first-movie-description{
         width: 605px;
@@ -353,10 +376,17 @@ header a{
     .first-movie-section{
         height: 549.59px;
     }
-    .first-movie-section .first-movie-container{
-        padding: 89px 104px 88px;
+    .first-movie-container .genre{
+        padding-left: 179px;
     }
-    .first-movie-container .first-movie-description{
+    .first-movie-container .star-container{
+        padding-left: 179px;
+    }
+    .first-movie-container h3{
+        padding-left: 179px;
+    }
+    .first-movie-container .first-m-description-container{
+        padding-left: 179px;
         width: 605px;
     }
     /*---------------movie section----------------*/
