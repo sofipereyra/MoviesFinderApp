@@ -14,14 +14,39 @@ function getMovies(url){
     fetch(url)
     .then(res => res.json())
     .then(data => {
-        console.log(data);
         showMovies(data.results);
     }).catch(error => error);
 }
 
 function showMovies(data){
     const movieContainer = document.getElementById('movie-container');
-    data.forEach(movie => {
+
+    const firstMovieSection = document.getElementById('first-movie-section');
+
+    let firstMovie = {};
+    firstMovie = data.slice(0,1);
+    const firstMovieEl = document.createElement('div');
+    firstMovieEl.classList.add("first-movie-container");
+    firstMovieEl.innerHTML = `
+        <img src="${IMG_URL}${firstMovie[0].backdrop_path}" id="bg-img" alt="">
+        <p class="genre">Science Fiction</p>
+                <div class="star-container">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                    <img class="star" src="./assets/home/star.svg" alt="">
+                </div>
+                <h3>${firstMovie[0].title}</h3>
+                <div class="first-m-description-container">
+                <p class="first-movie-description">${firstMovie[0].overview}</p>
+                </div>
+                <button class="watch-btn" aria-label="watch now button">Watch Now</button>
+    `
+    firstMovieSection.append(firstMovieEl);
+
+    let movies = data.slice(1);
+    movies.forEach(movie => {
         const {} = movie;
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
@@ -36,7 +61,9 @@ function showMovies(data){
                     <img class="star" src="./assets/home/star.svg" alt="">
                     <img class="star" src="./assets/home/star.svg" alt="">
                 </div>
+                <div class="movie-description-container">
                 <p id="movie-description" class="movie-description">${movie.overview}</p>
+                </div>
             </div>
         `
         movieContainer.append(movieEl);
