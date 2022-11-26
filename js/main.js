@@ -22,10 +22,11 @@ function showMovies(data){
     const movieContainer = document.getElementById('movie-container');
 
     const firstMovieSection = document.getElementById('first-movie-section');
-
+    
     let firstMovie = {};
     firstMovie = data.slice(0,1);
     const firstMovieEl = document.createElement('div');
+    firstMovieEl.innerHTML = '';
     firstMovieEl.classList.add("first-movie-container");
     firstMovieEl.innerHTML = `
         <img src="${IMG_URL}${firstMovie[0].backdrop_path}" id="bg-img" alt="">
@@ -46,6 +47,7 @@ function showMovies(data){
     firstMovieSection.append(firstMovieEl);
 
     let movies = data.slice(1);
+    movieContainer.innerHTML='';
     movies.forEach(movie => {
         const {} = movie;
         const movieEl = document.createElement('div');
@@ -72,15 +74,21 @@ function showMovies(data){
 
 const searchForm = document.getElementById("search-form");
 const search = document.getElementById("search");
+const searchError = document.getElementById("search-error");
 
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    let searchValue = search.value;
-    if(searchValue === ''){
-        throw new ErrorException("It can't be empty!");
-    }else{
-        getMovies(SEARCH_URL+searchValue);
-        searchValue = '';
+    searchError.innerHTML = '';
+    try{
+        let searchValue = search.value;
+        if(searchValue === ''){
+            throw new ErrorException("It can't be empty!");
+        }else{
+            getMovies(SEARCH_URL+searchValue);
+            searchValue = '';
+        }
+    }catch(ErrorException){
+        searchError.innerHTML = ErrorException.sms;
     }
 })
 
