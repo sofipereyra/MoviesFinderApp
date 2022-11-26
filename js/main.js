@@ -26,7 +26,7 @@ function showMovies(data){
     let firstMovie = {};
     firstMovie = data.slice(0,1);
     const firstMovieEl = document.createElement('div');
-    firstMovieEl.innerHTML = '';
+    firstMovieSection.innerHTML = '';
     firstMovieEl.classList.add("first-movie-container");
     firstMovieEl.innerHTML = `
         <img src="${IMG_URL}${firstMovie[0].backdrop_path}" id="bg-img" alt="">

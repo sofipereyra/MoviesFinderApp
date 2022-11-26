@@ -116,6 +116,10 @@ header a{
     overflow: auto;
     width: 462px;
     position: relative;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .first-movie-container .watch-btn{
     background-color: var(--bg-primary);
