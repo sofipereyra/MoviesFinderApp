@@ -7,7 +7,7 @@ Status: In progress...
 ## Design 🖼️
 [Figma](https://www.figma.com/file/MSmeonA7XIlKO21lm7EFZI/MovieFinder-Airont-Labs?node-id=0%3A1&t=vJ4byv73XLp9PyMA-0)
 
-## Use guide
+## Guide 🗺️
 
 Follow this steps:
 

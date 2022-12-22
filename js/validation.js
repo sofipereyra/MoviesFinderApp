@@ -69,3 +69,12 @@ form.addEventListener('submit', (e) =>{
     errorLabel.innerHTML = UserException.sms;
   }
 })
+
+const eyeImg = document.querySelector("#eye-img");
+  eyeImg.addEventListener("click", function () {
+    if(pass.type == "password"){
+      pass.type = "text";
+    }else{
+      pass.type = "password";
+    }
+  });
