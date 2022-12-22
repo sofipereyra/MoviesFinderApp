@@ -282,6 +282,10 @@ header a{
         width: 605px;
     }
     /*---------------movie section----------------*/
+    .movies-div-container{
+        width: 834px;
+        margin-inline: auto;
+    }
     /*------------three col movie view------------------*/
     .movies-section .movie-options .most-watched{
         font-size: 1.5rem;
@@ -357,11 +361,11 @@ header a{
     .movies-section .movies-container .movie .switch-description {
         font-size: 0.625rem;
         width: 544px;
-        margin-left: 90px;
+        padding-left: 90px;
     }
 }
 /*------------------------------------Desktop home screen------------------------------------------------*/
-@media (845px < width <= 1400px) and  (1446px < width <= 2560px){
+@media (min-width: 845px){
     /*-------------------Header Section------------------------*/
     header{
         justify-content: space-around;
@@ -435,7 +439,7 @@ header a{
         height: 8.91px;
     }
     .movies-section .movies-container .movie .movie-description{
-        margin-left: 30px;
+        margin-left: 10px;
         margin-right: 58px;
         width: 232px;
         height: 59.94px;
@@ -459,7 +463,17 @@ header a{
     }
     .movies-section .movies-container .movie .switch-description {
         font-size: 0.625rem;
-        margin-left: 90px;
+        margin-left: 0px;
         width: 772.89px;
+    }
+    .movies-div-container{
+        width: 1404px;
+        margin-inline: auto;
+    }
+}
+@media (min-width: 1441px){
+    /*-------------------Header Section------------------------*/
+    header{
+        justify-content: space-around;
     }
 }

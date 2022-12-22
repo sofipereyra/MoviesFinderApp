@@ -32,11 +32,7 @@ function showMovies(data){
         <img src="${IMG_URL}${firstMovie[0].backdrop_path}" id="bg-img" alt="">
         <p class="genre">Science Fiction</p>
                 <div class="star-container">
-                    <img class="star" src="./assets/home/star.svg" alt="">
-                    <img class="star" src="./assets/home/star.svg" alt="">
-                    <img class="star" src="./assets/home/star.svg" alt="">
-                    <img class="star" src="./assets/home/star.svg" alt="">
-                    <img class="star" src="./assets/home/star.svg" alt="">
+                    ${setStars(movie.vote_average)}
                 </div>
                 <h3>${firstMovie[0].title}</h3>
                 <div class="first-m-description-container">
@@ -57,11 +53,7 @@ function showMovies(data){
             <div class="movie-info">
                 <p class="movie-title">${movie.title}</p>
                 <div class="star-container">
-                    <img class="star" src="./assets/home/star.svg" alt="">
-                    <img class="star" src="./assets/home/star.svg" alt="">
-                    <img class="star" src="./assets/home/star.svg" alt="">
-                    <img class="star" src="./assets/home/star.svg" alt="">
-                    <img class="star" src="./assets/home/star.svg" alt="">
+                    ${setStars(movie.vote_average)}
                 </div>
                 <div class="movie-description-container">
                 <p id="movie-description" class="movie-description">${movie.overview}</p>
@@ -70,6 +62,22 @@ function showMovies(data){
         `
         movieContainer.append(movieEl);
     });
+}
+
+function setStars(score) {
+    let starImg = `<img class="star" src="./assets/home/star.svg" alt=""></img>`;
+    let starAvg = ``;
+    if (score < 2) {
+        return starAvg.concat(starImg);
+    } else if (score < 4) {
+        return starAvg.concat(starImg,starImg);
+    } else if (score < 6) {
+        return starAvg.concat(starImg,starImg,starImg);
+    } else if (score < 8) {
+        return starAvg.concat(starImg,starImg,starImg,starImg);
+    } else {
+        return starAvg.concat(starImg,starImg,starImg,starImg,starImg);
+    }
 }
 
 const searchForm = document.getElementById("search-form");
