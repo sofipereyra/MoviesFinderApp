@@ -361,13 +361,13 @@ header a{
     }
 }
 /*------------------------------------Desktop home screen------------------------------------------------*/
-@media (845px < width <= 1400px), (1446px < width <= 2560px) {
+@media (845px < width <= 1400px) and  (1446px < width <= 2560px){
     /*-------------------Header Section------------------------*/
     header{
         justify-content: space-around;
     }
 }
-@media (1400px < width < 1445px){
+@media (1400px < width < 2560px){
     /*-------------------Header Section------------------------*/
     header{
         justify-content: unset;
@@ -416,6 +416,7 @@ header a{
     }
     .switch-col-container{
         margin-right: 217px;
+        background-color: var(--bg-secondary);
     }
     .movies-section .movies-container .movie{
         width: 320px;

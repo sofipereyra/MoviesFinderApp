@@ -92,3 +92,10 @@ searchForm.addEventListener('submit', (e) => {
     }
 })
 
+const logout = document.querySelector("#logout");
+    logout.addEventListener("click", function () {
+        sessionStorage.removeItem("token");
+        localStorage.removeItem("token");
+        window.location.href = "../index.html";
+    });
+

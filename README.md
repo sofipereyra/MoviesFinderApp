@@ -6,3 +6,28 @@ Status: In progress...
 
 ## Design 🖼️
 [Figma](https://www.figma.com/file/MSmeonA7XIlKO21lm7EFZI/MovieFinder-Airont-Labs?node-id=0%3A1&t=vJ4byv73XLp9PyMA-0)
+
+## Use guide
+
+Follow this steps:
+
+```
+git clone https://github.com/sofipereyra/AirontMoviesApp.git
+cd json-server
+npm run server
+```
+
+Open http://localhost:3000 to view it in your browser.
+The page will reload when you make changes.
+You may also see any lint errors in the console.
+
+## Test
+
+You can see the login validation with this created user:
+
+```
+{
+    "email": "person@gmail.com",
+    "password": "Example123."
+}
+```
