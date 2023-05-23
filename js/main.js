@@ -14,34 +14,13 @@ function getMovies(url){
     fetch(url)
     .then(res => res.json())
     .then(data => {
+        showFirstMovie(data.results.slice(0,1));
         showMovies(data.results);
     }).catch(error => error);
 }
 
 function showMovies(data){
     const movieContainer = document.getElementById('movie-container');
-
-    const firstMovieSection = document.getElementById('first-movie-section');
-    
-    let firstMovie = {};
-    firstMovie = data.slice(0,1);
-    const firstMovieEl = document.createElement('div');
-    firstMovieSection.innerHTML = '';
-    firstMovieEl.classList.add("first-movie-container");
-    firstMovieEl.innerHTML = `
-        <img src="${IMG_URL}${firstMovie[0].backdrop_path}" id="bg-img" alt="">
-        <p class="genre">Science Fiction</p>
-                <div class="star-container">
-                    ${setStars(movie.vote_average)}
-                </div>
-                <h3>${firstMovie[0].title}</h3>
-                <div class="first-m-description-container">
-                <p class="first-movie-description">${firstMovie[0].overview}</p>
-                </div>
-                <button class="watch-btn" aria-label="watch now button">Watch Now</button>
-    `
-    
-    firstMovieSection.append(firstMovieEl);
 
     let movies = data.slice(1);
     movieContainer.innerHTML='';
@@ -67,6 +46,34 @@ function showMovies(data){
         })
     });
 
+}
+
+function showFirstMovie(movie){
+    const firstMovieSection = document.getElementById('first-movie-section');
+    
+    // let firstMovie = {};
+    // firstMovie = data.slice(0,1);
+    const firstMovieEl = document.createElement('div');
+    firstMovieSection.innerHTML = '';
+    firstMovieEl.classList.add("first-movie-container");
+    firstMovieEl.innerHTML = `
+        <img src="${IMG_URL}${movie[0].backdrop_path}" id="bg-img" alt="">
+        <p class="genre">Science Fiction</p>
+                <div class="star-container">
+                    ${setStars(movie.vote_average)}
+                </div>
+                <h3>${movie[0].title}</h3>
+                <div class="first-m-description-container">
+                <p class="first-movie-description">${movie[0].overview}</p>
+                </div>
+                <button class="watch-btn" aria-label="watch now button">Watch Now</button>
+    `
+    
+    firstMovieSection.append(firstMovieEl);
+    const playButton = document.querySelector('button');
+    playButton.addEventListener("click", () => {
+        setModal(movie[0])
+    })
 }
 
 function setStars(score) {
@@ -279,6 +286,7 @@ async function setModal(movie){
     close.addEventListener("click", function () {
         modalMain.style.display = "none";
         ofuscator.style.display = "none";
+        trailer.style.display = "none";
         body.style.overflow = "auto";
     });
 
@@ -386,9 +394,10 @@ searchForm.addEventListener('submit', (e) => {
 })
 
 const logout = document.querySelector("#logout");
-    logout.addEventListener("click", function () {
-        sessionStorage.removeItem("token");
-        localStorage.removeItem("token");
-        window.location.href = "../index.html";
-    });
+
+logout.addEventListener("click", function () {
+    sessionStorage.removeItem("token");
+    localStorage.removeItem("token");
+    window.location.href = "../index.html";
+});
 

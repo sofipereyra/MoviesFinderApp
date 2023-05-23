@@ -1,9 +1,15 @@
 {
-  "dependencies": {
-    "json-server": "^0.17.1",
-    "json-server-auth": "^2.1.0"
-  },
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "Movie app finder, a page created in Airont Lab's Front End BootCamp.",
+  "main": "index.html",
+  "author": "Sofia Pereyra",
+  "license": "ISC",
   "scripts": {
-    "server": "json-server db.json -m ./node_modules/json-server-auth"
+    "server": "json-server --watch db.json --port 8000 -m ./node_modules/json-server-auth"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.3",
+    "json-server-auth": "^2.1.0"
   }
 }

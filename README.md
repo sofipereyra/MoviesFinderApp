@@ -5,7 +5,7 @@ Hi! I'm Sofi, here you'll find a movie finder app based on the figma design belo
 Status: In progress...
 
 ## Design 🖼️
-[Figma](https://www.figma.com/file/MSmeonA7XIlKO21lm7EFZI/MovieFinder-Airont-Labs?node-id=0%3A1&t=vJ4byv73XLp9PyMA-0)
+[Figma](https://www.figma.com/file/yyis2Z7Eft4B10wPcwc3g7/MovieFinder-Airont-Labs-Design?type=design&node-id=0%3A1&t=ykiLeEZEwWzxXL4G-1)
 
 ## Guide 🗺️
 
