@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieFinder</title>
+    <meta name="author" content="Sofía L. Pereyra">
+    <meta name="description"
+        content="This is an app where you'll find any movie your looking for, it's synopsis, trailer and release date among other information">
+    <meta name="keywords" content="Movies, Reviews, Photos, User Ratings, Synopsis, Trailers">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/modal.css">
 </head>
 
 <body>
@@ -42,7 +47,47 @@
                 </div>
             </div>
         </section>
+
+        <div class="trailer"></div>
+        <div class="modal">
+            <div class="modal-top">
+                
+            </div>
+            <div class="modal-bottom">
+                <p class="modal-description"></p>
+                <div class="modal-latter">
+                    <div class="modal-details-cont">
+                        <div class="modal-details">
+                            <div class="modal-detail">
+                                <h3>Release Date:</h3>
+                                <p id="modal-releasedate"></p>
+                            </div>
+                            <div class="modal-detail">
+                                <h3>Genre:</h3>
+                                <p id="modal-genres"></p>
+                            </div>
+                        </div>
+                        <div class="modal-details">
+                            <div class="modal-detail">
+                                <h3>Original Language:</h3>
+                                <p id="modal-language"></p>
+                            </div>
+                            <div class="modal-detail">
+                                <h3>Popularity:</h3>
+                                <p id="modal-popularity"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-suggestions">
+                        <h3>Similar Movies:</h3>
+                        <div class="modal-similarmovies"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ofuscator"></div>
     </main>
+
     <script src="./js/switch-columns.js"></script>
     <script src="./js/main.js"></script>
 </body>
