@@ -280,6 +280,7 @@ async function setModal(movie){
     ofuscator.addEventListener("click", function () {
         modalMain.style.display = "none";
         ofuscator.style.display = "none";
+        trailer.style.display = "none";
         body.style.overflow = "auto";
     });
 
