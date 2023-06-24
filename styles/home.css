@@ -166,6 +166,7 @@ header a{
     object-fit: cover;
 }
 .movies-section .movies-container .movie .movie-info{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     position: relative;
     width: 100%;
     height: 100%;
@@ -303,7 +304,13 @@ header a{
         margin-top: 28px;
         margin-bottom: 30px;
     }
+    #switch-one{
+        border: 0;
+        background-color: var(--bg-secondary);
+    }
     #switch-three{
+        border: 0;
+        background-color: var(--bg-secondary);
         margin-right: 13px;
     }
     .movies-section .movies-container{
@@ -434,7 +441,6 @@ header a{
         margin-left: 30px;
     }
     .movies-section .movies-container .movie img{
-        margin-top: 7.7px;
         width: 9.38px;
         height: 8.91px;
     }

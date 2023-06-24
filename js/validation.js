@@ -78,3 +78,4 @@ const eyeImg = document.querySelector("#eye-img");
       pass.type = "password";
     }
   });
+
