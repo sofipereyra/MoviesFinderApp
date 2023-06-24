@@ -2,7 +2,7 @@
 
 ## About 👇
 Hi! I'm Sofi, here you'll find a movie finder app based on the figma design below. It's a proyect for Airont Labs Academy.
-Status: In progress...
+Status: Completed.
 
 ## Design 🖼️
 [Figma](https://www.figma.com/file/yyis2Z7Eft4B10wPcwc3g7/MovieFinder-Airont-Labs-Design?type=design&node-id=0%3A1&mode=design&t=YWTpKrrAodKMRS7D-1)
